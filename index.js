@@ -34,10 +34,10 @@ document.getElementById('modalBody').setAttribute('style','width:60vw;');
 document.getElementById('modal').style.boxShadow='0 0 20px 9px darkslategrey';};
 };
 let newNote = '';
-let clsName = document.getElementById('accordionSectionBtn').nextSibling.querySelector('p').className.split(' ').find(cls=&gt;cls.includes('jss'));
-let iNote = Array.from(document.querySelectorAll('.'+clsName)).map((item)=&gt;item.innerHTML).find(note=&gt;note.toLowerCase().includes('intro '));
+let clsName = document.getElementById('accordionSectionBtn').nextSibling.querySelector('p').className.split(' ').find(cls=>cls.includes('jss'));
+let iNote = Array.from(document.querySelectorAll('.'+clsName)).map((item)=>item.innerHTML).find(note=>note.toLowerCase().includes('intro '));
 let fArr = iNote.split('\n');
-fArr.forEach((item)=&gt;newNote += ('<p>'+item+'</p>'));
+fArr.forEach((item)=>newNote += ('<p>'+item+'</p>'));
 if(document.getElementById('SubmitCaseFormId')){
 document.getElementById('SubmitCaseFormId').previousSibling.innerHTML=newNote;
 document.getElementById('SubmitCaseFormId').previousSibling.setAttribute('style', 'border: solid black 1px; padding: 10px; grid-area: customColumns; align-self: stretch; border-radius: 3px;');
